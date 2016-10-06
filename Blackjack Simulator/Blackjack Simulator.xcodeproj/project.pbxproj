@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B42B8631D208436009501B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42B8621D208436009501B8 /* AppDelegate.swift */; };
+		8B42B8651D208436009501B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42B8641D208436009501B8 /* ViewController.swift */; };
+		8B42B8681D208436009501B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B42B8661D208436009501B8 /* Main.storyboard */; };
+		8B42B86B1D208437009501B8 /* Blackjack_Simulator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B42B8691D208436009501B8 /* Blackjack_Simulator.xcdatamodeld */; };
+		8B42B86D1D208437009501B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B42B86C1D208437009501B8 /* Assets.xcassets */; };
+		8B42B8701D208437009501B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B42B86E1D208437009501B8 /* LaunchScreen.storyboard */; };
+		8B42B8781D21DEFB009501B8 /* BlackjackSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42B8771D21DEFB009501B8 /* BlackjackSimulator.swift */; };
+		8BE606891D26187500F39B15 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE606881D26187500F39B15 /* Deck.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B42B85F1D208435009501B8 /* Blackjack Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackjack Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B42B8621D208436009501B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B42B8641D208436009501B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B42B8671D208436009501B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B42B86A1D208436009501B8 /* Blackjack_Simulator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blackjack_Simulator.xcdatamodel; sourceTree = "<group>"; };
+		8B42B86C1D208437009501B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B42B86F1D208437009501B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B42B8711D208437009501B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B42B8771D21DEFB009501B8 /* BlackjackSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackjackSimulator.swift; sourceTree = "<group>"; };
+		8BE606881D26187500F39B15 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B42B85C1D208435009501B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B42B8561D208435009501B8 = {
+			isa = PBXGroup;
+			children = (
+				8B42B8611D208436009501B8 /* Blackjack Simulator */,
+				8B42B8601D208435009501B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B42B8601D208435009501B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B42B85F1D208435009501B8 /* Blackjack Simulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B42B8611D208436009501B8 /* Blackjack Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				8B42B8621D208436009501B8 /* AppDelegate.swift */,
+				8B42B8641D208436009501B8 /* ViewController.swift */,
+				8B42B8771D21DEFB009501B8 /* BlackjackSimulator.swift */,
+				8BE606881D26187500F39B15 /* Deck.swift */,
+				8B42B8661D208436009501B8 /* Main.storyboard */,
+				8B42B86C1D208437009501B8 /* Assets.xcassets */,
+				8B42B86E1D208437009501B8 /* LaunchScreen.storyboard */,
+				8B42B8711D208437009501B8 /* Info.plist */,
+				8B42B8691D208436009501B8 /* Blackjack_Simulator.xcdatamodeld */,
+			);
+			path = "Blackjack Simulator";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B42B85E1D208435009501B8 /* Blackjack Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B42B8741D208437009501B8 /* Build configuration list for PBXNativeTarget "Blackjack Simulator" */;
+			buildPhases = (
+				8B42B85B1D208435009501B8 /* Sources */,
+				8B42B85C1D208435009501B8 /* Frameworks */,
+				8B42B85D1D208435009501B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blackjack Simulator";
+			productName = "Blackjack Simulator";
+			productReference = 8B42B85F1D208435009501B8 /* Blackjack Simulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B42B8571D208435009501B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jordan Davis";
+				TargetAttributes = {
+					8B42B85E1D208435009501B8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 8B42B85A1D208435009501B8 /* Build configuration list for PBXProject "Blackjack Simulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B42B8561D208435009501B8;
+			productRefGroup = 8B42B8601D208435009501B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B42B85E1D208435009501B8 /* Blackjack Simulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B42B85D1D208435009501B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B42B8701D208437009501B8 /* LaunchScreen.storyboard in Resources */,
+				8B42B86D1D208437009501B8 /* Assets.xcassets in Resources */,
+				8B42B8681D208436009501B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B42B85B1D208435009501B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B42B8651D208436009501B8 /* ViewController.swift in Sources */,
+				8B42B8781D21DEFB009501B8 /* BlackjackSimulator.swift in Sources */,
+				8BE606891D26187500F39B15 /* Deck.swift in Sources */,
+				8B42B86B1D208437009501B8 /* Blackjack_Simulator.xcdatamodeld in Sources */,
+				8B42B8631D208436009501B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B42B8661D208436009501B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B42B8671D208436009501B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B42B86E1D208437009501B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B42B86F1D208437009501B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B42B8721D208437009501B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B42B8731D208437009501B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B42B8751D208437009501B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Blackjack Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davis.Blackjack-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8B42B8761D208437009501B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Blackjack Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davis.Blackjack-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B42B85A1D208435009501B8 /* Build configuration list for PBXProject "Blackjack Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B42B8721D208437009501B8 /* Debug */,
+				8B42B8731D208437009501B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B42B8741D208437009501B8 /* Build configuration list for PBXNativeTarget "Blackjack Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B42B8751D208437009501B8 /* Debug */,
+				8B42B8761D208437009501B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B42B8691D208436009501B8 /* Blackjack_Simulator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B42B86A1D208436009501B8 /* Blackjack_Simulator.xcdatamodel */,
+			);
+			currentVersion = 8B42B86A1D208436009501B8 /* Blackjack_Simulator.xcdatamodel */;
+			path = Blackjack_Simulator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8B42B8571D208435009501B8 /* Project object */;
+}

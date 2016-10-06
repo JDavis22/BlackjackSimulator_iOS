@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blackjack_Simulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJW-Ho-KCJ">
+                                <rect key="frame" x="76" y="295" width="169" height="48"/>
+                                <color key="backgroundColor" red="0.095697662638061121" green="0.69157959738837882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.18966837523039637" green="0.61469223617992119" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Simulate!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SimButton_TouchCancel:" destination="BYZ-38-t0r" eventType="touchCancel" id="PZf-yW-RK1"/>
+                                    <action selector="SimButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="oJ2-e1-aV9"/>
+                                    <action selector="simButton_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GT-5p-mjT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,000 Simulations" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WsE-WF-WI5">
+                                <rect key="frame" x="76" y="63" width="169" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="numOfSims:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="fOA-nz-GC3"/>
+                                    <action selector="numOfSimsEnd:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="y1X-4C-M7k"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Hand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atM-aX-nKR">
+                                <rect key="frame" x="119" y="105" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer Up Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPi-ZC-4md">
+                                <rect key="frame" x="99" y="192" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="fe9-FV-1rm">
+                                <rect key="frame" x="18" y="134" width="120" height="31"/>
+                                <connections>
+                                    <action selector="userSliderOne_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KSU-tQ-bm0"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="HFM-6l-xVE">
+                                <rect key="frame" x="182" y="134" width="120" height="31"/>
+                                <connections>
+                                    <action selector="userSliderTwo_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qC9-R0-hy3"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="lSL-8G-Omq">
+                                <rect key="frame" x="70" y="250" width="180" height="31"/>
+                                <connections>
+                                    <action selector="dealerSlider_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="G10-Jf-gSe"/>
+                                </connections>
+                            </slider>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Stats go here :)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DbF-mR-ooQ">
+                                <rect key="frame" x="40" y="362" width="240" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RJ-eG-x0f" userLabel="oneLabel">
+                                <rect key="frame" x="49" y="101" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj7-P6-LDO" userLabel="threeLabel">
+                                <rect key="frame" x="139" y="221" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pah-PX-wgH" userLabel="twoLabel">
+                                <rect key="frame" x="229" y="101" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5IB-FO-DHR">
+                                <rect key="frame" x="142" y="343" width="37" height="37"/>
+                                <color key="color" red="0.12941176470588237" green="0.61960784313725492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dealerUpCard" destination="lSL-8G-Omq" id="EFv-oa-xbS"/>
+                        <outlet property="loadingIcon" destination="5IB-FO-DHR" id="DYM-JS-csm"/>
+                        <outlet property="oneLabel" destination="5RJ-eG-x0f" id="tH0-iC-NAH"/>
+                        <outlet property="simButton" destination="lJW-Ho-KCJ" id="YHV-jI-KbD"/>
+                        <outlet property="statsTextField" destination="DbF-mR-ooQ" id="ASa-uc-WcR"/>
+                        <outlet property="threeLabel" destination="Wj7-P6-LDO" id="RIq-rt-ywk"/>
+                        <outlet property="twoLabel" destination="pah-PX-wgH" id="dQ9-5i-czg"/>
+                        <outlet property="userCardOne" destination="fe9-FV-1rm" id="6mf-1K-qso"/>
+                        <outlet property="userCardTwo" destination="HFM-6l-xVE" id="2A6-iW-bf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="314"/>
+        </scene>
+    </scenes>
+</document>
