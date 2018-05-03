@@ -15,7 +15,7 @@ class Deck {
     
     init() {
         totalDeckCount = 6
-        initShoe(6)
+		initShoe(totalDecks: 6)
     }
     
     func initShoe(totalDecks: Int) {
@@ -54,13 +54,13 @@ class Deck {
         var randCard = "1"
         if(deckArray.count > 0) {
             let randIndex = Int(arc4random_uniform(UInt32(deckArray.count - 1)))
-            randCard = deckArray.removeAtIndex(randIndex)
+            randCard = deckArray.remove(at: randIndex)
         } else {
             randCard = "1"
         }
         
         if deckArray.count < (totalDeckCount * 52)  / 5 {
-            initShoe(totalDeckCount)
+			initShoe(totalDecks: totalDeckCount)
         }
         
         return Int(randCard)!

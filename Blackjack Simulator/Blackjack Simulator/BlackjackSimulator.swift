@@ -63,10 +63,10 @@ class BlackjackSimulator {
     }
     
     func runSim() {
-        myShoe.initShoe(6)
+		myShoe.initShoe(totalDecks: 6)
         
         while !stay {
-            doUserAction(&userHand, isSecondHand: false)
+			doUserAction(userHand: &userHand, isSecondHand: false)
         }
         
         while !isDealerStay {
@@ -85,7 +85,7 @@ class BlackjackSimulator {
     }
     
     // user decision    
-    func doUserAction(inout userHand: Int, isSecondHand: Bool) {
+	func doUserAction( userHand: inout Int, isSecondHand: Bool) {
         var canProceed = true
         
         // player does nothing if Dealer has BJ
@@ -100,28 +100,28 @@ class BlackjackSimulator {
         
         if(canProceed) {
             if userHand == 11 && dealerUpCard <= 10 {
-                doubleDown(&userHand, isSecondHand: isSecondHand)
+				doubleDown(userHand: &userHand, isSecondHand: isSecondHand)
                 canProceed = false
             } else if userHand == 10 && dealerUpCard <= 9 {
-                doubleDown(&userHand, isSecondHand: isSecondHand)
+				doubleDown(userHand: &userHand, isSecondHand: isSecondHand)
                 canProceed = false
             } else if userHand == 9 && dealerUpCard >= 3 && dealerUpCard <= 6 {
-                doubleDown(&userHand, isSecondHand: isSecondHand)
+				doubleDown(userHand: &userHand, isSecondHand: isSecondHand)
                 canProceed = false
             } else if userCardOne == 11 || userCardTwo == 11 {
                 // user has one ace, two aces would have triggered a split.
                 if (userHand == 13  || userHand == 14) && (dealerUpCard == 5 || dealerUpCard == 6) {
-                    doubleDown(&userHand, isSecondHand: false)
+					doubleDown(userHand: &userHand, isSecondHand: false)
                     canProceed = false
                 } else if (userHand == 15 || userHand == 16) &&
                     (dealerUpCard >= 4 && dealerUpCard <= 6) {
-                    doubleDown(&userHand, isSecondHand: false)
+					doubleDown(userHand: &userHand, isSecondHand: false)
                     canProceed = false
                 } else if (userHand == 17 || userHand == 18) && (dealerUpCard >= 3 && dealerUpCard <= 6) {
-                    doubleDown(&userHand, isSecondHand: false)
+					doubleDown(userHand: &userHand, isSecondHand: false)
                     canProceed = false
                 } else if userHand <= 17 {
-                    Hit(&userHand)
+					Hit(userHand: &userHand)
                     canProceed = false
                 }
                 
@@ -132,10 +132,10 @@ class BlackjackSimulator {
         if(canProceed) {
             // These are the always moves!
             if userHand <= 11 {
-                Hit(&userHand)
+				Hit(userHand: &userHand)
                 canProceed = false
             } else if userHand >= 17 {
-                Stay(isSecondHand)
+				Stay(isSecondHand: isSecondHand)
                 canProceed = false
             }
         }
@@ -143,10 +143,10 @@ class BlackjackSimulator {
         if(canProceed) {
             // these are the decisions based on dealer card.
             if dealerUpCard >= 7 && userHand >= 12 && userHand <= 16 {
-                Hit(&userHand)
+				Hit(userHand: &userHand)
                 canProceed = false
             } else if dealerUpCard <= 6 && userHand >= 12 &&  userHand <= 16 {
-                Stay(isSecondHand)
+				Stay(isSecondHand: isSecondHand)
                 canProceed = false
             }
         }
@@ -217,7 +217,7 @@ class BlackjackSimulator {
     
     func splitHand() {
         if recommendedAction == "" {
-            setAction("You should Split!")
+			setAction(action: "You should Split!")
         }
         
         // create a new hand based on seperate cards
@@ -225,54 +225,54 @@ class BlackjackSimulator {
         userHandTwo = userCardTwo
         
         if userCardTwo == 11 && userCardOne == 11 {
-            Hit(&userHand)
-            Hit(&userHandTwo)
+			Hit(userHand: &userHand)
+			Hit(userHand: &userHandTwo)
         } else {
             while !stay && !isDealerBJ{
-                splitHandActions(&userHand, isSecondHand: false)
+				splitHandActions(userHand: &userHand, isSecondHand: false)
             }
             
             while !secondStay && !isDealerBJ {
-                splitHandActions(&userHandTwo, isSecondHand: true)
+				splitHandActions(userHand: &userHandTwo, isSecondHand: true)
             }
             
             
         }
     }
 
-    func splitHandActions(inout userHand: Int, isSecondHand: Bool) {
+	func splitHandActions( userHand: inout Int, isSecondHand: Bool) {
         if dealerHasBlackjack() {
             return
         }
         
         if userHand == 9 && dealerUpCard >= 3 && dealerUpCard <= 6 {
-            doubleDown(&userHand, isSecondHand: isSecondHand)
+			doubleDown(userHand: &userHand, isSecondHand: isSecondHand)
             return
         }
         
         // These are the always moves!
         if userHand <= 11 {
-            Hit(&userHand)
+			Hit(userHand: &userHand)
             return
         } else if userHand >= 17 {
-            Stay(isSecondHand)
+			Stay(isSecondHand: isSecondHand)
             return
         }
         
         // these are the decisions based on dealer card.
         
         if dealerUpCard >= 7 && userHand >= 12 && userHand <= 16 {
-            Hit(&userHand)
+			Hit(userHand: &userHand)
             return
         } else if dealerUpCard <= 6 && userHand >= 12 &&  userHand <= 16 {
-            Stay(isSecondHand)
+			Stay(isSecondHand: isSecondHand)
             return
         }
     }
     
-    func Hit(inout userHand: Int) {
+	func Hit( userHand: inout Int) {
         if recommendedAction == "" {
-            setAction("You should Hit!")
+			setAction(action: "You should Hit!")
         }
         
         let newCard = myShoe.retrieveCard()
@@ -291,7 +291,7 @@ class BlackjackSimulator {
     
     func Stay(isSecondHand: Bool) {
         if recommendedAction == "" {
-            setAction("You should Stay!")
+			setAction(action: "You should Stay!")
         }
         
         if(isSecondHand) {
@@ -301,11 +301,11 @@ class BlackjackSimulator {
         }
     }
     
-    func doubleDown(inout userHand: Int, isSecondHand: Bool) {
+	func doubleDown( userHand: inout Int, isSecondHand: Bool) {
         if recommendedAction == "" {
-            setAction("Double Down!")
+			setAction(action: "Double Down!")
         }
-        Hit(&userHand)
+		Hit(userHand: &userHand)
         
         if isSecondHand {
             secondStay = true
